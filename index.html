@@ -1195,6 +1195,7 @@ html, body {
 .cal-day {
   background: white;
   min-height: 88px;
+  min-width: 0;
   padding: 6px;
   font-size: 11px;
   position: relative;
@@ -1205,6 +1206,7 @@ html, body {
   border-radius: 12px;
   box-shadow: 0 2px 6px var(--shadow-soft);
   transition: all 0.15s;
+  overflow: hidden;
 }
 
 .cal-day:hover { transform: translateY(-2px); box-shadow: 0 4px 10px var(--shadow); }
@@ -1411,12 +1413,30 @@ html, body {
 }
 
 @media (max-width: 600px) {
-  body { padding: 12px; }
-  .header h1 { font-size: 26px; letter-spacing: 0.5px; }
-  .character { width: 48px; }
-  .title-row { gap: 10px; }
-  .dday { font-size: 28px; padding: 12px 28px; letter-spacing: 1px; }
-  .wedding-date { font-size: 15px; }
+  body { padding: 10px; }
+  .container { max-width: 100%; }
+  .panel { padding: 16px 12px; border-radius: 22px; }
+  .header { padding: 18px 14px 16px; border-radius: 22px; }
+  .header h1 { font-size: 22px; letter-spacing: 0.3px; }
+  .character { width: 42px; }
+  .title-row { gap: 8px; margin-bottom: 4px; }
+  .dday { font-size: 24px; padding: 10px 22px; letter-spacing: 0.8px; }
+  .wedding-date { font-size: 14px; }
+  .calendar-grid { gap: 2px; }
+  .cal-header-cell { padding: 6px 2px; font-size: 11px; border-radius: 8px; }
+  .cal-day { min-height: 64px; padding: 3px; border-radius: 8px; gap: 1px; }
+  .cal-date { font-size: 11px; }
+  .cal-event { font-size: 9px; padding: 1px 4px; }
+  .cal-event-more { font-size: 9px; padding: 0 2px; }
+  .cal-bottom { gap: 12px; }
+  .cal-bottom-section { padding: 14px 12px; border-radius: 16px; }
+  .cal-nav { padding: 6px 14px; font-size: 14px; }
+  .cal-month-label { font-size: 17px; min-width: 130px; }
+  .upcoming-event { grid-template-columns: 40px 18px 1fr auto auto; gap: 6px; font-size: 12px; }
+  .vendor-tile-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
+  .vendor-summary { padding: 14px 10px; gap: 10px; }
+  .summary-item .value { font-size: 18px; }
+  .modal { padding: 26px 18px 18px; border-radius: 22px; margin: 16px auto; }
   .tabs { padding: 0 8px; }
   .tab { padding: 10px 14px; font-size: 13px; }
   .panel { padding: 16px; }
