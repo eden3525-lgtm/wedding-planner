@@ -61,6 +61,8 @@
 html, body {
   font-family: 'Gowun Dodum', '맑은 고딕', 'Malgun Gothic', sans-serif;
   background-color: #c8e6b8;
+  overflow-x: hidden;
+  max-width: 100vw;
   background-image:
     url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cellipse cx='28' cy='34' rx='9' ry='4' fill='%23a4d496' transform='rotate(30 28 34)' opacity='0.55'/%3E%3Cellipse cx='110' cy='78' rx='9' ry='4' fill='%23a4d496' transform='rotate(-25 110 78)' opacity='0.55'/%3E%3Cellipse cx='58' cy='118' rx='8' ry='3.5' fill='%23a4d496' transform='rotate(60 58 118)' opacity='0.55'/%3E%3Cg transform='translate(90,24)' opacity='0.7'%3E%3Ccircle cx='-4' cy='0' r='3.2' fill='%23ffd9e0'/%3E%3Ccircle cx='4' cy='0' r='3.2' fill='%23ffd9e0'/%3E%3Ccircle cx='0' cy='-4' r='3.2' fill='%23ffd9e0'/%3E%3Ccircle cx='0' cy='4' r='3.2' fill='%23ffd9e0'/%3E%3Ccircle cx='0' cy='0' r='2.5' fill='%23ffec99'/%3E%3C/g%3E%3Cg transform='translate(18,92)' opacity='0.7'%3E%3Ccircle cx='-3' cy='0' r='2.6' fill='%23ffd9e0'/%3E%3Ccircle cx='3' cy='0' r='2.6' fill='%23ffd9e0'/%3E%3Ccircle cx='0' cy='-3' r='2.6' fill='%23ffd9e0'/%3E%3Ccircle cx='0' cy='3' r='2.6' fill='%23ffd9e0'/%3E%3Ccircle cx='0' cy='0' r='2' fill='%23ffec99'/%3E%3C/g%3E%3Ccircle cx='12' cy='14' r='1.6' fill='%237fb976' opacity='0.45'/%3E%3Ccircle cx='128' cy='46' r='1.6' fill='%237fb976' opacity='0.45'/%3E%3Ccircle cx='74' cy='62' r='1.6' fill='%237fb976' opacity='0.45'/%3E%3Ccircle cx='46' cy='130' r='1.6' fill='%237fb976' opacity='0.45'/%3E%3Ccircle cx='126' cy='124' r='1.6' fill='%237fb976' opacity='0.45'/%3E%3C/svg%3E");
   background-size: 140px 140px;
@@ -1116,6 +1118,13 @@ html, body {
   padding: 32px 26px 24px;
   margin: 30px auto;
   position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.modal > * {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .modal-close {
@@ -1444,12 +1453,16 @@ html, body {
   .vendor-tile-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
   .vendor-summary { padding: 14px 10px; gap: 10px; }
   .summary-item .value { font-size: 18px; }
-  .modal-overlay { padding: 16px 8px; }
-  .modal { padding: 28px 16px 18px; border-radius: 20px; margin: 8px auto; }
-  .vendor-row { grid-template-columns: 64px 1fr; gap: 6px; }
+  .modal-overlay { padding: 14px 6px; }
+  .modal { padding: 30px 22px 20px; border-radius: 22px; margin: 8px auto; }
+  .vendor-row { grid-template-columns: 60px 1fr; gap: 6px; padding: 4px 0; }
   .vendor-row input, .vendor-row textarea { padding: 7px 10px; font-size: 13px; }
   .payment-block { padding: 10px 12px; }
   .payment-block-row { grid-template-columns: 50px 1fr; }
+  .vendor-header { gap: 6px; }
+  .vendor-icon { font-size: 26px; padding: 0 4px; }
+  .vendor-name { font-size: 16px; }
+  .modal-close { top: 8px; right: 8px; width: 30px; height: 30px; font-size: 16px; }
   .tabs { padding: 0 8px; }
   .tab { padding: 10px 14px; font-size: 13px; }
 }
