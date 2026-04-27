@@ -58,6 +58,19 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+input, textarea, select, button {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  font-family: inherit;
+}
+
+input[type="text"], input[type="date"], input[type="time"], input[type="number"], textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 html, body {
   font-family: 'Gowun Dodum', '맑은 고딕', 'Malgun Gothic', sans-serif;
   background-color: #c8e6b8;
@@ -1122,9 +1135,17 @@ html, body {
   box-sizing: border-box;
 }
 
-.modal > * {
+.modal > *,
+.modal > * > * {
   max-width: 100%;
   box-sizing: border-box;
+}
+
+#vendor-modal-content,
+#event-modal-content {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .modal-close {
@@ -1456,9 +1477,18 @@ html, body {
   .modal-overlay { padding: 14px 20px; }
   .modal { padding: 26px 18px 18px; border-radius: 22px; margin: 8px auto; max-width: calc(100vw - 40px); }
   .vendor-row {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 4px;
     padding: 6px 0 4px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .vendor-row > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
   .vendor-row label {
     font-size: 11px;
@@ -1470,9 +1500,18 @@ html, body {
   }
   .payment-block { padding: 12px 14px; }
   .payment-block-row {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2px;
     margin-bottom: 8px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .payment-block-row > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
   .payment-block-row label { padding-left: 2px; }
   .payment-block-row .amount-readonly { text-align: left; padding-left: 12px; }
