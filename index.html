@@ -437,6 +437,9 @@ html, body {
   border-radius: 999px;
   color: var(--brown-dark);
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 8px;
 }
 
 .month-tasks {
@@ -516,6 +519,7 @@ html, body {
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(127, 185, 118, 0.4);
   transition: transform 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
 }
 
 .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(127, 185, 118, 0.5); }
@@ -727,6 +731,8 @@ html, body {
   font-size: 13px;
   background: white;
   width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .vendor-row input:focus,
@@ -1093,7 +1099,7 @@ html, body {
   align-items: flex-start;
   justify-content: center;
   z-index: 1000;
-  padding: 20px;
+  padding: 20px 12px;
   overflow-y: auto;
   backdrop-filter: blur(4px);
 }
@@ -1154,6 +1160,8 @@ html, body {
   box-shadow: 0 4px 12px var(--shadow);
   color: var(--brown-dark);
   transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .cal-nav:hover { transform: translateY(-2px); box-shadow: 0 6px 16px var(--shadow-strong); }
@@ -1436,11 +1444,14 @@ html, body {
   .vendor-tile-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
   .vendor-summary { padding: 14px 10px; gap: 10px; }
   .summary-item .value { font-size: 18px; }
-  .modal { padding: 26px 18px 18px; border-radius: 22px; margin: 16px auto; }
+  .modal-overlay { padding: 16px 8px; }
+  .modal { padding: 28px 16px 18px; border-radius: 20px; margin: 8px auto; }
+  .vendor-row { grid-template-columns: 64px 1fr; gap: 6px; }
+  .vendor-row input, .vendor-row textarea { padding: 7px 10px; font-size: 13px; }
+  .payment-block { padding: 10px 12px; }
+  .payment-block-row { grid-template-columns: 50px 1fr; }
   .tabs { padding: 0 8px; }
   .tab { padding: 10px 14px; font-size: 13px; }
-  .panel { padding: 16px; }
-  .vendor-row { grid-template-columns: 70px 1fr; }
 }
 </style>
 </head>
