@@ -1453,12 +1453,29 @@ html, body {
   .vendor-tile-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 10px; }
   .vendor-summary { padding: 14px 10px; gap: 10px; }
   .summary-item .value { font-size: 18px; }
-  .modal-overlay { padding: 14px 6px; }
-  .modal { padding: 30px 22px 20px; border-radius: 22px; margin: 8px auto; }
-  .vendor-row { grid-template-columns: 60px 1fr; gap: 6px; padding: 4px 0; }
-  .vendor-row input, .vendor-row textarea { padding: 7px 10px; font-size: 13px; }
-  .payment-block { padding: 10px 12px; }
-  .payment-block-row { grid-template-columns: 50px 1fr; }
+  .modal-overlay { padding: 14px 8px; }
+  .modal { padding: 28px 18px 18px; border-radius: 22px; margin: 8px auto; }
+  .vendor-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 6px 0 4px;
+  }
+  .vendor-row label {
+    font-size: 11px;
+    padding-left: 2px;
+  }
+  .vendor-row input, .vendor-row textarea {
+    padding: 9px 12px;
+    font-size: 14px;
+  }
+  .payment-block { padding: 12px 14px; }
+  .payment-block-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    margin-bottom: 8px;
+  }
+  .payment-block-row label { padding-left: 2px; }
+  .payment-block-row .amount-readonly { text-align: left; padding-left: 12px; }
   .vendor-header { gap: 6px; }
   .vendor-icon { font-size: 26px; padding: 0 4px; }
   .vendor-name { font-size: 16px; }
